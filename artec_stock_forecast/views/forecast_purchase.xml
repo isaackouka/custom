@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.actions.act_window" id="artec_forecast_purchase_action">
+        <field name="name">Forecast purchase</field>
+        <field name="res_model">artec.forecast.purchase</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_similing_face">Create the first forecast purchase
+            </p>
+        </field>
+    </record>
+
+    <!-- Search -->
+    <record id="artec_forecast_purchase_view_search" model="ir.ui.view">
+        <field name="name">Forecast.purchase.view.search</field>
+        <field name="model">artec.forecast.purchase</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <field name="product_id"/>
+            </search>
+        </field>
+    </record>
+    
+    <!-- tree -->
+    <record id="artec_forecast_purchase_view_tree" model="ir.ui.view">
+        <field name="name">Forecast.purchase.view.tree</field>
+        <field name="model">artec.forecast.purchase</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="product_id"/>
+                <field name="date_purchase"/>
+                <field name="quantity_topurchase"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- form -->
+    <record id="artec_forecast_purchase_view_form" model="ir.ui.view">
+        <field name="name">Forecast.purchase.view.form</field>
+        <field name="model">artec.forecast.purchase</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="product_id"/>
+                        <field name="date_purchase"/>
+                        <field name="quantity_topurchase"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

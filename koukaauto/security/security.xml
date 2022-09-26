@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="koukaauto_groupe_user" model="res.groups">
+        <field name="name">Agent</field>
+        <field name="category_id" ref="base.module_category_uncategorized"/>
+    </record>
+
+    <record id="koukaauto_group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="base.module_category_uncategorized"/>
+        <field name="implied_ids" eval="[(4, ref('koukaauto_groupe_user'))]"/>
+    </record>
+
+    <!-- <record id="model_xml_id_rule" model="ir.rule">
+        <field name="name">Human readable name</field>
+        <field name="model_id" ref="model_koukaauto_vehiclead"/>
+        <field name="groups" eval="[(4, ref('koukaauto_groupe_user'))]" />
+        <field name="perm_read" eval="0" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+        <field name="domain_force">[('user_id','=',user.id)]</field>
+    </record> -->
+
+</odoo>

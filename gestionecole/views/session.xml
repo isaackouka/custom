@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record model="ir.actions.act_window" id="session_list_action">
+        <field name="name">Sessions</field>
+        <field name="res_model">gestionecole.session</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_similing_face">Add Sessions
+            </p>
+        </field>
+    </record>
+
+    <!-- model.name search view -->
+    <record id="session_view_search" model="ir.ui.view">
+        <field name="name">gestionecole.session.view.search</field>
+        <field name="model">gestionecole.session</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <field name="formation_id"/>
+                <field name="date"/>
+                <field name="teacher_id"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- model.name tree view -->
+    <record id="session_view_tree" model="ir.ui.view">
+        <field name="name">gestionecole.session.view.tree</field>
+        <field name="model">gestionecole.session</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="formation_id"/>
+                <field name="teacher_id"/>
+                <field name="date"/>
+                <field name="number_seat"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- model.name form view -->
+    <record id="session_view_form" model="ir.ui.view">
+        <field name="name">gestionecole.session.view.form</field>
+        <field name="model">gestionecole.session</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="formation_id"/>
+                        <field name="teacher_id"/>
+                        <field name="date"/>
+                        <field name="number_seat"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
