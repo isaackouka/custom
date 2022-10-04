@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="koukaauto_home" inherit_id="website.homepage">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <section style="background-color: #eee;">
+                <div class="text-center container py-5">
+                    <h4 class="mt-4 mb-5"><strong>Toutes les annonces</strong></h4>
+              
+                    <div class="row">
+                        <t t-foreach="vehicleads" t-as="vehiclead">
+                            <div class="col-lg-4 col-md-12 mb-4">
+                                <a href="/vehicle/{{vehiclead.id}}">
+                                    <div class="card">
+                                        <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                            data-mdb-ripple-color="light">
+                                            <t t-if="vehiclead.image_ids">
+                                                <img t-att-src="image_data_uri(vehiclead.image_ids[0].image_1920)" class="w-100"/>
+                                            </t>
+                                            <div class="mask">
+                                                <div class="d-flex justify-content-start align-items-end h-100">
+                                                    <h5><span class="badge bg-primary ms-2">New</span></h5>
+                                                </div>
+                                            </div>
+                                            <div class="hover-overlay">
+                                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-3"><span t-esc="vehiclead.name"/></h5>
+                                            <p><span t-esc="vehiclead.engine_id.name"/></p>
+                                            <h5 class="mb-3"><span t-esc="vehiclead.expected_price"/> DA</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>
+</odoo>

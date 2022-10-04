@@ -1,0 +1,18 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+vehiclead_manager,vehiclead manager,model_koukaauto_vehiclead,koukaauto_group_manager,1,1,1,1
+mark_manager,mark manager,model_koukaauto_mark,koukaauto_group_manager,1,1,1,1
+model_manager,model manager,model_koukaauto_model,koukaauto_group_manager,1,1,1,1
+offer_manager,offer manager,model_koukaauto_offer,koukaauto_group_manager,1,1,1,1
+engine_manager,engine manager,model_koukaauto_engine,koukaauto_group_manager,1,1,1,1
+finition_manager,finition manager,model_koukaauto_finition,koukaauto_group_manager,1,1,1,1
+createoffer_manager,createoffer manager,model_koukaauto_createoffer,koukaauto_group_manager,1,1,1,1
+
+
+mark_user,mark agent,model_koukaauto_mark,koukaauto_groupe_user,1,0,0,0
+model_user,model agent,model_koukaauto_model,koukaauto_groupe_user,1,1,1,1
+offer_user,offer agent,model_koukaauto_offer,koukaauto_groupe_user,1,1,1,1
+engine_user,engine agent,model_koukaauto_engine,koukaauto_groupe_user,1,0,0,0
+createoffer_user,createoffer agent,model_koukaauto_createoffer,koukaauto_groupe_user,1,1,1,1
+finition_user,finition agent,model_koukaauto_finition,koukaauto_groupe_user,1,1,1,1
+
+vehiclead_read_all,vehiclead all,model_koukaauto_vehiclead,,1,1,1,1

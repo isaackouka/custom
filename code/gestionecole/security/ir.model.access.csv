@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+teacher_user,teacher user,model_gestionecole_teacher,base.group_user,1,1,1,1
+formation_user,formation user,model_gestionecole_formation,base.group_user,1,1,1,1
+session_user,session user,model_gestionecole_session,base.group_user,1,1,1,1

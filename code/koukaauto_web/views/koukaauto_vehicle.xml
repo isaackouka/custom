@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="vehicle" name="vehicle">
+        <t t-call="website.layout"/>
+        <h1><span t-esc="vehicleads.name"/></h1>
+    </template>
+</odoo>

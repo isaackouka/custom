@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Menu -->
+    <menuitem id="main_gestionecole_menu" name="Gestion ecole"/>
+    <menuitem id="gestionecole_menu" name="Gestion ecole" parent="main_gestionecole_menu"/>
+    
+    <menuitem id="teacher_menu" name="Teachers" parent="gestionecole_menu"
+    action="teacher_list_action"/>
+    <menuitem id="formation_menu" name="Formations" parent="gestionecole_menu"
+    action="formation_list_action"/>
+    <menuitem id="session_menu" name="Sessions" parent="gestionecole_menu"
+    action="session_list_action"/>
+</odoo>

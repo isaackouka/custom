@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="formation_list_action" model="ir.actions.act_window">
+        <field name="name">Formations</field>
+        <field name="res_model">gestionecole.formation</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_similing_face">Create the first formation
+            </p>
+        </field>
+    </record>
+
+    <!-- Search -->
+    <record id="formation_view_search" model="ir.ui.view">
+        <field name="name">gestionecole.formation.view.search</field>
+        <field name="model">gestionecole.formation</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="teacher_ids"/>
+            </search>
+        </field>
+    </record>
+    
+    <!-- tree -->
+    <record id="formation_view_tree" model="ir.ui.view">
+        <field name="name">gestionecole.formation.view.tree</field>
+        <field name="model">gestionecole.formation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="teacher_ids" 
+                widget="many2many_tags"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <!-- form -->
+    <record id="formation_view_form" model="ir.ui.view">
+        <field name="name">gestionecole.formation.view.form</field>
+        <field name="model">gestionecole.formation</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                    <notebook>
+                        <page string="Teacher">
+                            <field name="teacher_ids">
+                                <tree string="teacherinfo">
+                                    <field name="first_name"/>
+                                    <field name="last_name"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
