@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-artec_access_forecast_sale_base_user,artec_access_forecast_sale_base_user,model_artec_forecast_sale,base.group_user,1,1,1,1
-artec_access_forecast_purchase_base_user,artec_access_forecast_purchase_base_user,model_artec_forecast_purchase,base.group_user,1,1,1,1
-artec_access_forecasted_product_base_user,artec_access_forecasted_product_base_user,model_artec_forecast_product,base.group_user,1,1,1,1

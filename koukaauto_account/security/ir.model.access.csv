@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_koukaauto_account_koukaauto_account,koukaauto_account.koukaauto_account,model_koukaauto_account_koukaauto_account,base.group_user,1,1,1,1
-lot_user,lot user,model_gestionecole_lot,base.group_user,1,1,1,1
